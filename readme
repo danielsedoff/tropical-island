@@ -1,0 +1,71 @@
+This is my solution to an assignment that I found online.
+
+The assignment name was "Tropical Island."
+
+You are in a rectangular island. Its width is M, length is N. Its landscape can
+be written as an integer matrix, where an integer denotes the height in a given point.
+For instance, this is a small 3x3 island:
+
+4 5 4
+3 1 5
+5 4 1
+
+When it rains the island gets full of water, and all its lowlands become lakes.
+Let us define a lowland as a part of the island whose cells are positioned 
+next to higher (greater value) cells. Diagonals are ignored. Sea level shall be 0.
+In the example above, there is only one lowland place: the center cell with
+the value of 1 (next to it, there are cells with values of 3, 5, 5, and 4.)
+
+Therefore after a rain the height of these cells will change as follows:
+
+4 5 4
+3 3 5
+5 4 1
+
+We can see that the lowland has grown from 1 to 3, after which the water 
+started flowing to the cells sitting next to it, and eventually into the sea.
+The full volume of the water which got trapped in the lowlands is 2 cubic cells.
+Here is a more complicated example:
+
+5 3 4 5
+6 2 1 4
+3 1 1 4
+8 5 4 3
+
+After a rain, it changes this way:
+
+5 3 4 5
+6 3 3 4
+3 3 3 4
+8 5 4 3
+
+The full volume of water which stays in the island after a rain is 7 cubic cells!
+Your program should take a two-dimensional array and return an int which denotes
+the total volume of water staying in the island after a rain.
+
+Details:
+The island dimensions / width and length, M and N, are integers [1, 50]
+The heights are integers [1, 1000].
+Here are some more examples of input data:
+
+4 5 4
+3 1 5
+5 4 1
+
+5 3 4 5
+6 2 1 4
+3 1 1 4
+8 5 4 3
+
+2 2 2
+2 1 2
+2 1 2
+2 1 2
+
+Your program should return the following respectively:
+
+2
+7
+0
+
+
